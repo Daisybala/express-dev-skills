@@ -7,12 +7,14 @@ module.exports = {
 
 function show(req,res){
     res.render('skills/show',{
-        skill: Skill.getOne(req.params.id)
+        skill: Skill.getOne(req.params.id),
+        title: 'skill Details'
     })
 }
 function index(req, res) {
     res.render('skills/index', {
     // Do not use a leading slash when rendering!
-    skills: Skill.getAll()
+    skills: Skill.getAll(),
+    title: 'All Skills'
     });
 }
